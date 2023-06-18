@@ -4,7 +4,7 @@ fn main() {
 	introduction();
 
 	loop {
-		println!("What you wanna do? (+, -, *, /, **, %, 0 - exit)");
+		println!("What you wanna do? (+, -, *, /, **, %, & - exit)");
 
 		let mut some_do: String = String::new();
 
@@ -75,7 +75,7 @@ fn int_from_input(mut str: String) -> i64 {
 				Ok(_some_number) => {
 					break _some_number
 				}
-				Err(_) => continue,
+				Err(_) => panic!("Enter a integer!"),
 		};
 	}
 }
@@ -87,16 +87,18 @@ fn calc(mut a: i64, b: i64, todo: String) -> i64 {
 		"*" => a * b,
 		"/" => a / b,
 		"**" => {
-			for _b in 0..b {
-				a = a * a;
+			let num = a;
+			for _i in 1..b {
+				a = a * num;
 			};
 			a
 		},
 		"%" => a % b,
-		"0" => panic!("You exit the rust calculator"),
+		"&" => {
+			panic!("You exit the rust calculator");
+		},
 		_ => {
-			println!("Invalid function");
-			0
+			panic!("Invalid function");
 		},
 	}
 }
