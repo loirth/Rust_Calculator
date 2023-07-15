@@ -1,0 +1,35 @@
+				There i wrote all functions and where they used
+
+											  _________
+Functional--+				|---introduction -|used in|- main.rs
+			|---menu--------|
+			|
+			|
+			|
+			|
+			|
+			|
+			|
+			|
+			|
+			|						  _________
+			|----methods----|---exit -|used in|- main.rs, 
+							|				_________
+							|---what_to_do -|used in|- introduction.rs
+							|					_________
+							|---equation -|used in|- main.rs  || This is the main function in which all operations tale place
+							|
+							|---converters--+					  _________
+											|---float_from_input -|used in|- input_equation
+
+
+
+Main----+
+		|
+		|---Not the function but history stored here.
+
+
+
+Math--------+
+			|								 _________
+			|---basic_operators----|---calc -|used in|- math.rs

@@ -1,104 +1,16 @@
-use std::io;
+use rust_calculator::functional::menu::introduction::introduction;
+use rust_calculator::functional::methods::input_equation;
 
 fn main() {
 	introduction();
+	
+	let mut history: Vec<String> = Vec::new();
+	let mut history_results: Vec<f64> = Vec::new();
 
 	loop {
-		println!("What you wanna do? (+, -, *, /, **, %, & - exit)");
-
-		let mut some_do: String = String::new();
-
-		io::stdin()
-			.read_line(&mut some_do)
-			.expect("Failed to read line");
-
-		println!("Enter the first number");
-
-		let first_number = int_from_input(String::new());
-
-		println!("Enter the second number");
-
-		let second_number = int_from_input(String::new());
-
-		let result: i64 = calc(first_number, second_number, some_do.clone());
-
-		println!("The result is: {}\n{} {} {} = {}", result, first_number, some_do, second_number, result);
-	}
-}
-
-fn introduction() {
-	println!("             Hi!               ");
-	println!("Welcome to the Rust Calculator!");
-	println!("      What you wanna do?       ");
-	println!("0 - Start/continue | 1 - Help | 2 - Exit");
-
-	let mut start_command: String = String::new();
-
-	loop {
-		io::stdin()
-			.read_line(&mut start_command)
-			.expect("Failed to read line");
-
-		let start_command = match start_command.trim().parse() {
-			Ok(start_command) => start_command,
-			Err(_) => {
-				println!("Enter the number!");
-				continue;
-			},
-		};
+		let equation_for_history = input_equation::equation(&history, &history_results);
 		
-		match start_command {
-			0 => {
-				println!("Start");
-				break;
-			},
-			1 => {
-				println!("Help");
-				break;
-			},
-			2 => {
-				panic!("You exit the rust_calculator");
-			},
-			_ => panic!("There are some error"),
-		};
-	};
-}
-
-
-fn int_from_input(mut str: String) -> i64 {
-	loop {
-		io::stdin()
-		.read_line(&mut str)
-		.expect("Failed to read line");
-
-		let _some_number = match str.trim().parse() {
-				Ok(_some_number) => {
-					break _some_number
-				}
-				Err(_) => panic!("Enter a integer!"),
-		};
-	}
-}
-
-fn calc(mut a: i64, b: i64, todo: String) -> i64 {
-	match todo.as_str().trim() {
-		"+" => a + b,
-		"-" => a - b,
-		"*" => a * b,
-		"/" => a / b,
-		"**" => {
-			let num = a;
-			for _i in 1..b {
-				a = a * num;
-			};
-			a
-		},
-		"%" => a % b,
-		"&" => {
-			panic!("You exit the rust calculator");
-		},
-		_ => {
-			panic!("Invalid function");
-		},
+		Vec::push(&mut history, equation_for_history.0);
+		Vec::push(&mut history_results, equation_for_history.1);
 	}
 }

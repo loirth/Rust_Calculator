@@ -1,0 +1,33 @@
+                         Tasks
+
+- Error handling  || Completed!
+
+- Better commands calling (Start/start instead of 0 etc)  || Completed!
+
+			|----- Clear history
+		   /
+- History {----- Read history || Completed!
+		   \
+			|----- Use last result in history as first number
+
+- Help
+
+- Settings
+
+- Documentation
+
+- Colored text
+
+
+			 |----- Pifagore theorem
+			/
+- Geometry {----- Area (square, rectangle, triangle, circle)
+			\
+			 |----- Sin, cos, tan, ctan
+
+
+			|----- Equations
+		   /
+- Algebra {----- Root of degree n, logarifms
+		   \
+			|----- Long equations ( a+b * (k/n) - j / (t+a) )
