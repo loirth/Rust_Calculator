@@ -13,7 +13,7 @@ pub fn calc(mut a: f64, b: f64, todo: &str) -> f64 {
 		},
 		"%" => a % b,
 		_ => {
-			println!("Function doesn't exist. Please try again.");
+			println!("Function doesn't exist. Please try again.\n");
 			return 0.000000;
 		},
 	}

@@ -3,24 +3,24 @@ src-+-
 	|
 	|---main.rs <- there are a history
 	|
-	|
-	|---lib.rs--+-										               
+	|												|---exit
+	|---lib.rs--+-									|
 				|									|---help  || not implemented
 				|---+-----functional----+-			|               
 					|					|			|---introduction (completed, can be changed)
 					|					|---menu----|
 					|					|			|---settings  || not implemented
 					|					|
+					|					|
 					|					|								|---what_to_do
 					|					|								|
-					|					|								|---exit
-					|					|--------------methods----------|
-					+----math---+-										|   || Coming soon ||
-								|										|
-								|										|---input_equation <- all operations there, func "equation" too
-								|										|
-								|--basic_operators (calc)				|---converters--+
-								|														|---float_from_input
+					|					|--------------methods----------|---equation <- all operations here
+					+----math---+-										|
+								|										|---converters--+
+								|														|---from_input
+								|														
+								|--basic_operators (calc)				
+								|											
 								|--algebra || not implemented				
 								|
 								|--geometry  || not implemented

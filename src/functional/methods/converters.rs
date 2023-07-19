@@ -1,1 +1,1 @@
-pub mod float_from_input;
+pub mod from_input;

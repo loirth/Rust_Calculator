@@ -1,9 +1,10 @@
-				There i wrote all functions and where they used
+				There i wrote all public functions and where they used
+			All private functions used only in script in which they declared
 
 											  _________
 Functional--+				|---introduction -|used in|- main.rs
-			|---menu--------|
-			|
+			|---menu--------|							 _________
+			|				|---history::manage_history -|used in|- input_equation.rs
 			|
 			|
 			|
@@ -13,14 +14,14 @@ Functional--+				|---introduction -|used in|- main.rs
 			|
 			|
 			|						  _________
-			|----methods----|---exit -|used in|- main.rs, 
+			|----methods----|---exit -|used in|- equation.rs, what_to_do.rs, history.rs
 							|				_________
 							|---what_to_do -|used in|- introduction.rs
 							|					_________
-							|---equation -|used in|- main.rs  || This is the main function in which all operations tale place
+							|---input_equation -|used in|- main.rs  || This is the main function in which all operations take place
 							|
-							|---converters--+					  _________
-											|---float_from_input -|used in|- input_equation
+							|---converters--+								  _________
+											|---from_input::float_from_input -|used in|- input_equation
 
 
 

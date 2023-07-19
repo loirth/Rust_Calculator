@@ -4,11 +4,11 @@
 
 - Better commands calling (Start/start instead of 0 etc)  || Completed!
 
-			|----- Clear history
-		   /
-- History {----- Read history || Completed!
-		   \
-			|----- Use last result in history as first number
+						   |----- Clear history  || Completed!
+		   				  /
+- History  || Completed! {----- Read history || Completed!
+		   				  \
+						   |----- Use last result in history as first number  || Completed!
 
 - Help
 
