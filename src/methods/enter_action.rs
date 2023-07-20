@@ -1,11 +1,11 @@
-use crate::functional::menu::exit::exit;
+use crate::exit::exit;
 
-pub fn what_to_do() {
+pub fn enter_action() {
 	use std::io;
 
 	loop {
-		println!("        What you wanna do?       ");
-		println!("     Start  |  Help  |  Exit"       );
+		println!("                    What you wanna do?  ");
+		println!("                 Start  |  Help  |  Exit");
 
 		let mut start_command: String = String::new();
 	

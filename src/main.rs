@@ -1,8 +1,15 @@
-use rust_calculator::functional::menu::introduction::introduction;
-use rust_calculator::functional::methods::equation;
+mod methods;
+pub use crate::methods::*;
+
+mod menu;
+pub use crate::menu::*;
+
+mod math;
+pub use crate::math::*;
+
 
 fn main() {
-	introduction();
+	project_info::introduction();
 	
 	let mut history: Vec<String> = Vec::new();
 	let mut history_results: Vec<f64> = Vec::new();

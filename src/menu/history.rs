@@ -1,12 +1,12 @@
 use std::io;
 
-use crate::functional::menu::exit;
+use crate::exit;
 												  //clear history or not, take last value from results or not
 pub fn manage_history(history: &Vec<String>, results: &Vec<f64>) -> (bool, bool) {
 	print_history(history);
 
 	loop{
-		println!("               What you wanna do next?");
+		println!("                   What you wanna do next?                  ");
 		println!("History  |  Continue  |  Clear  |  Take  |  Results  |  Exit");
 
 		let mut some_do: String = String::new();

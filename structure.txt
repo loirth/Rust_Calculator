@@ -1,26 +1,12 @@
 src-+-
 	|
 	|
-	|---main.rs <- there are a history
-	|
-	|												|---exit
-	|---lib.rs--+-									|
-				|									|---help  || not implemented
-				|---+-----functional----+-			|               
-					|					|			|---introduction (completed, can be changed)
-					|					|---menu----|
-					|					|			|---settings  || not implemented
-					|					|
-					|					|
-					|					|								|---what_to_do
-					|					|								|
-					|					|--------------methods----------|---equation <- all operations here
-					+----math---+-										|
-								|										|---converters--+
-								|														|---from_input
-								|														
-								|--basic_operators (calc)				
-								|											
-								|--algebra || not implemented				
-								|
-								|--geometry  || not implemented
+	|--main.rs <- there are a history
+	|	|
+	|	|
+	|-------|
+			|--math -> basic_operators, equation, exit
+			|
+			|--menu -> history, project_info
+			|
+			|--methods -> enter_action, converters

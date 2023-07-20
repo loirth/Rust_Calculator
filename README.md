@@ -23,3 +23,7 @@
 ### V.0.0.5:
 	History fully completed
 	Some minor and design fixes
+
+### V.0.0.6:
+	Refactoring
+	Some design fixes

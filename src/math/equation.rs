@@ -1,7 +1,7 @@
 use std::io;
 
-use crate::functional::methods::converters::from_input;
-use crate::functional::menu::{exit, history};
+use crate::methods::{exit, converters};
+use crate::menu::history;
 use crate::math::basic_operators;
 
 																	//equation, res, clear history 
@@ -55,15 +55,15 @@ pub fn input_equation(history: &Vec<String>, result_history: &Vec<f64>) -> (Stri
 					continue;
 				},
 			},
-			false => from_input::float_from_input(String::from("first")),
+			false => converters::float_from_input(String::from("first")),
 		};
 		
 
-		let second_number = from_input::float_from_input(String::from("second"));
+		let second_number = converters::float_from_input(String::from("second"));
 
 		let result: f64 = basic_operators::calc(first_number, second_number, some_do);
 
-		println!("The result is: {}\n", result);
+		println!("\nThe result is: {}\n", result);
 
 
 		let equation = format!("{} {} {} = {}", first_number, some_do, second_number, result);

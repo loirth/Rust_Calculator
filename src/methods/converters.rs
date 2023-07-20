@@ -1,4 +1,4 @@
-use std::{io};
+use std::io;
 
 pub fn float_from_input(what_number: String) -> f64 {
 	loop {
